@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #282a36;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #f8f8f2;
+}
+
+canvas {
+    background-color: #44475a;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.8rem;
+    color: #f8f8f2;
+}
+
+.score-value {
+    font-weight: 700;
+    font-size: 4.5rem;
+    display: block;
+    margin-top: -10px;
+}
+
+.menu-screen {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    color: #f8f8f2;
+}
+
+.game-over {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 3em;
+    color: #ff5555;
+}
+
+.final-score {
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #f8f8f2;
+}
+
+.btn-play {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px 10px 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #282a36;
+    background-color: #50fa7b;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.joistyck-buttons {
+    width: 150px; /* Define a largura fixa */
+    height: 150px; /* Define a altura fixa para ser igual à largura */
+    border: 2px solid #bd93f9; /* Adiciona bordas */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #f8f8f2;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: #44475a; /* Cor de fundo mais clara que o body */
+    cursor: pointer;
+    flex-wrap: wrap; /* Permite que os botões se alinhem corretamente */
+    margin-top: 20px; /* Espaçamento acima da div */
+}
+
+@media only screen and (max-width: 768px) {
+    .joistyck-buttons {
+        display: flex; /* Exibe os botões de controle em dispositivos móveis e usa flexbox para alinhamento */
+    }
+}
+
+/* Estilo adicional para os botões */
+.joistyck-buttons button {
+    flex: 1 1 auto; /* Permite que os botões se redimensionem automaticamente */
+    margin: 5px; /* Espaçamento entre os botões */
+    padding: 5px; /* Ajuste do padding para caber melhor */
+    border: none;
+    border-radius: 5px;
+    background-color: #6272a4; /* Cor de fundo dos botões */
+    color: #f8f8f2;
+    cursor: pointer;
+    max-width: calc(100% - 10px); /* Garante que o botão não ultrapasse a largura da div */
+}
+
+/* Estilo adicional para as divs internas */
+.cima, .baixo, .lados {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.lados {
+    display: flex;
+    justify-content: space-between;
+}
